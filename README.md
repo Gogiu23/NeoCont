@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="NeoCont" width="320">
+</p>
+
 # NeoCont
 
 Find every occurrence of a word in your project from a sidebar, by double clicking on it.
