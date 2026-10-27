@@ -6,6 +6,8 @@
 
 Find every occurrence of a word in your project from a sidebar, by double clicking on it.
 
+![NeoCont demo](assets/demo.gif)
+
 ## Features
 
 - Double click on a word: it gets selected and a sidebar on the right lists every match in the project, grouped by file.
@@ -13,6 +15,12 @@ Find every occurrence of a word in your project from a sidebar, by double clicki
 - Double click (or `Enter`) on a match: opens the file at that line.
 - Whole-word, case-sensitive search from the git root of the current file (or the current directory), using [ripgrep](https://github.com/BurntSushi/ripgrep) when available and `grep` otherwise. Searches run in the background, so Neovim never blocks.
 - Gradient header with the Neovim icon, a status row with the number of matches, and a gradient border on the preview. Every color is configurable.
+
+## Screenshots
+
+| Double click a word | Click a match to preview it | Double click to open it |
+|---|---|---|
+| ![Sidebar](assets/sidebar.png) | ![Preview](assets/preview.png) | ![Open](assets/open.png) |
 
 ## Requirements
 
@@ -147,4 +155,8 @@ require('neocont').close()        -- close the sidebar
 ```sh
 # headless tests
 nvim --headless -u NONE --cmd 'set rtp+=.' -l tests/smoke.lua
+
+# regenerate the screenshots and assets/demo.gif in a new Alacritty window
+# (macOS, needs ffmpeg; the terminal running it needs Screen Recording permission)
+assets/capture/run.sh
 ```
